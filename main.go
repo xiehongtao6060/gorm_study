@@ -82,6 +82,6 @@ func testTask1() {
 
 }
 func main() {
-	db := InitDB()
-	task.Task2(db)
+	//db := InitDB()
+	task.Task3()
 }
