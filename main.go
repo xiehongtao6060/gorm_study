@@ -27,7 +27,7 @@ type Post struct {
 // InitDB 初始化数据库
 func InitDB() *gorm.DB {
 	db := ConnectDB()
-	err := db.AutoMigrate(&User{}, &Post{}, &task.Student{})
+	err := db.AutoMigrate(&User{}, &Post{}, &task.Student{}, &task.Account{}, &task.Transaction{})
 	if err != nil {
 		panic(err)
 	}
@@ -83,5 +83,5 @@ func testTask1() {
 }
 func main() {
 	db := InitDB()
-	task.RunTask1(db)
+	task.Task2(db)
 }
